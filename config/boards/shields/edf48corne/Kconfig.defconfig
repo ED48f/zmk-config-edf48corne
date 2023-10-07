@@ -1,7 +1,7 @@
-if SHIELD_CORNE_LEFT
+if SHIELD_Eed48fcorne_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "ed48fcorne"
+    default "ED48F CORNE"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
