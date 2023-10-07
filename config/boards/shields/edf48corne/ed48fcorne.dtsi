@@ -8,7 +8,7 @@
 
 / {
     chosen {
-        
+
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
     };
@@ -74,8 +74,7 @@ sensors {
         sensors = <&left_encoder &right_encoder>;
     };
     
-&pro_micro_i2c {
-    status = "okay";
+
 
 
 };
