@@ -1,4 +1,4 @@
-if SHIELD_Eed48fcorne_LEFT
+if SHIELD_ed48fcorne_left
 
 config ZMK_KEYBOARD_NAME
     default "ED48F CORNE"
@@ -8,7 +8,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
+if SHIELD_ed48fcorne_left || SHIELD_ed48fcorne_right
 
 config ZMK_SPLIT
     default y
