@@ -4,5 +4,5 @@
 config SHIELD_ED48FCORNE_LEFT
     def_bool $(shields_list_contains,ed48fcorne_left)
 
-config SHIELD_ED48FCORNE_RIDHT
+config SHIELD_ED48FCORNE_RIGHT
     def_bool $(shields_list_contains,ed48fcorne_right)
