@@ -12,3 +12,5 @@ if SHIELD_ed48fcorne_left || SHIELD_ed48fcorne_right
 
 config ZMK_SPLIT
     default y
+
+endif
