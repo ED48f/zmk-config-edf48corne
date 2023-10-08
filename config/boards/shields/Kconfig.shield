@@ -1,8 +1,8 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
 
-config SHIELD_ed48fcorne_left
+config SHIELD_ED48FCORNE_LEFT
     def_bool $(shields_list_contains,ed48fcorne_left)
 
-config SHIELD_ed48fcorne_right
+config SHIELD_ED48FCORNE_RIDHT
     def_bool $(shields_list_contains,ed48fcorne_right)
