@@ -44,22 +44,20 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9)
     left_encoder: left_encoder {
         compatible = "alps,ec11";
         label = "L_ENCODER";
-        resolution = <30>;
-        status = "disabled";
+        resolution = <8>;
+        status = "enable";
 
-        a-gpios = <&pro_micro 8 GPIO_PULL_UP>;
-        b-gpios = <&pro_micro 9 GPIO_PULL_UP>;
-    };
+        a-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 
     right_encoder: right_encoder {
         compatible = "alps,ec11";
         label = "R_ENCODER";
-        resolution = <30>;
-        status = "disabled";
+        resolution = <8>;
+        status = "enable";
 
-        a-gpios = <&pro_micro 9 GPIO_PULL_UP>;
-        b-gpios = <&pro_micro 8 GPIO_PULL_UP>;
-    };
+        a-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 
     sensors {
         compatible = "zmk,keymap-sensors";
