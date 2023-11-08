@@ -1,17 +1,17 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_ed48fcorne_left
+if SHIELD_EDF48CORNE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "ED48F CORNE"
+    default "EDF48 Corne"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_ed48fcorne_left || SHIELD_ed48fcorne_right
+if SHIELD_EDF48CORNE_LEFT || SHIELD_EDF48CORNE_RIGHT
 
 config ZMK_SPLIT
     default y
