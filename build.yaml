@@ -14,10 +14,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: ed48fcorne_left 
-
-
-include:
+    shield: ed48fcorne_left
   - board: nice_nano_v2
-    shield: ed48fcorne_left 
- 
+    shield: ed48fcorne_right
