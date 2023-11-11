@@ -16,10 +16,6 @@ if SHIELD_EDF48CORNE_LEFT || SHIELD_EDF48CORNE_RIGHT
 config ZMK_SPLIT
     default y
 
-config ZMK_RGB_UNDERGLOW
-    select WS2812_STRIP
-    select SPI
-
 if ZMK_DISPLAY
 
 config I2C
