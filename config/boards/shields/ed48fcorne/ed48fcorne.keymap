@@ -27,7 +27,7 @@
                          &rgb_ug RGB_EFF &ext_power EP_ON &mo 1 &rgb_ug RGB_ON   &kp RET &mo 2 &kp RALT
                         >;
 
-                        sensor-bindings = <&inc_dec_kp LEFT_BRACKET RIGHT_BRACKET &inc_dec_kp PG_UP PG_DN>;
+                        sensor-bindings = <&inc_dec_kp RGB_HUI RGB_HUD &inc_dec_kp RGB_SAI RGB_SAD>;
                 };
 
                 lower_layer {
