@@ -27,7 +27,7 @@
                          &rgb_ug RGB_EFF &ext_power EP_ON &mo 1 &rgb_ug RGB_ON   &kp RET &mo 2 &kp RALT
                         >;
 
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                        sensor-bindings = <&inc_dec_kp LEFT_BRACE RIGHT_BRACE &inc_dec_kp PG_UP PG_DN>;
                 };
 
                 lower_layer {
