@@ -12,6 +12,15 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    behaviors {
+        LSHIFT_CAPS: LSHIFT_CAPS {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LSHIFT_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -23,10 +32,10 @@
             //              |     | GUI | LWR | SPC |   | ENT | RSE  | ALT |     |
 
             bindings = <
-&kp ESCAPE  &kp Q  &kp W              &kp F  &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y       &kp SEMICOLON  &kp BSPC
-&kp TAB     &kp A  &kp R              &kp S  &kp T  &kp G      &kp M    &kp N  &kp E      &kp I       &kp O          &kp SQT
-&kp LSHFT   &kp Z  &kp X              &kp C  &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT     &kp FSLH       &kp RCMD
-                   &ext_power EP_TOG  &mo 3  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RALT   &kp K_MUTE
+&kp ESCAPE    &kp Q  &kp W              &kp F  &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y       &kp SEMICOLON  &kp BSPC
+&kp TAB       &kp A  &kp R              &kp S  &kp T  &kp G      &kp M    &kp N  &kp E      &kp I       &kp O          &kp SQT
+&LSHIFT_CAPS  &kp Z  &kp X              &kp C  &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT     &kp FSLH       &kp RCMD
+                     &ext_power EP_TOG  &mo 3  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RALT   &kp K_MUTE
             >;
 
             sensor-bindings =
@@ -42,10 +51,10 @@
             //              |     | GUI |     | SPC |   | ENT |     | ALT |     |
 
             bindings = <
-&kp GRAVE   &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6   &kp N7  &kp N8    &kp N9  &kp N0   &kp MINUS
-&sk LSHIFT  &kt F1        &kt F2        &kt F3        &kt F4        &kt F5        &kt F6   &kt F7  &kt F8    &kt F9  &kt F10  &kt F11
-&kp LCTRL   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none    &none   &none     &none   &none    &bt BT_CLR
-                          &none         &none         &none         &kp SPACE     &kp RET  &none   &kp RALT  &none
+&kp GRAVE       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6   &kp N7  &kp N8    &kp N9  &kp N0   &kp MINUS
+&kp LEFT_SHIFT  &kt F1        &kt F2        &kt F3        &kt F4        &kt F5        &kt F6   &kt F7  &kt F8    &kt F9  &kt F10  &kt F11
+&kp LCTRL       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none    &none   &none     &none   &none    &bt BT_CLR
+                              &none         &none         &none         &kp SPACE     &kp RET  &none   &kp RALT  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
