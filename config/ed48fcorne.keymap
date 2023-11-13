@@ -42,10 +42,10 @@
             //              |     | GUI |     | SPC |   | ENT |     | ALT |     |
 
             bindings = <
-&kp GRAVE  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6   &kp N7  &kp N8    &kp N9  &kp N0   &kp MINUS
-&kp LSHFT  &kt F1        &kt F2        &kt F3        &kt F4        &kt F5        &kt F6   &kt F7  &kt F8    &kt F9  &kt F10  &kt F11
-&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none    &none   &none     &none   &none    &bt BT_CLR
-                         &none         &none         &none         &kp SPACE     &kp RET  &none   &kp RALT  &none
+&kp GRAVE   &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6   &kp N7  &kp N8    &kp N9  &kp N0   &kp MINUS
+&sk LSHIFT  &kt F1        &kt F2        &kt F3        &kt F4        &kt F5        &kt F6   &kt F7  &kt F8    &kt F9  &kt F10  &kt F11
+&kp LCTRL   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none    &none   &none     &none   &none    &bt BT_CLR
+                          &none         &none         &none         &kp SPACE     &kp RET  &none   &kp RALT  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -59,10 +59,10 @@
             //              |     | GUI |     | SPC |   | ENT |     | ALT |     |
 
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET        &kp AMPS         &kp ASTERISK     &kp LPAR         &kp RPAR         &kp UNDERSCORE
-&kp LSHFT  &none     &none   &none     &none     &none      &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none            &none
-&kp LCTRL  &none     &none   &none     &none     &none      &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD
-                     &none   &none     &none     &kp SPACE  &kp RET          &none            &kp RALT         &none
+&kp TILDE   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET        &kp AMPS         &kp ASTERISK     &kp LPAR         &kp RPAR         &kp UNDERSCORE
+&sk LSHIFT  &none     &none   &none     &none     &none      &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none            &none
+&kp LCTRL   &none     &none   &none     &none     &none      &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD
+                      &none   &none     &none     &kp SPACE  &kp RET          &none            &kp RALT         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -70,10 +70,10 @@
 
         layer_3 {
             bindings = <
-&kp PLUS  &kp MINUS  &kp N7  &kp N8  &kp N9  &trans  &kp K_LOCK  &trans  &trans  &trans  &trans  &trans
-&kp STAR  &kp FSLH   &kp N4  &kp N5  &kp N6  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-&trans    &trans     &kp N1  &kp N2  &kp N3  &kp N0  &trans      &trans  &trans  &trans  &trans  &trans
-                     &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans
+&kp PLUS  &kp MINUS  &kp N7  &kp N8  &kp N9  &trans  &kp K_LOCK  &kp PRINTSCREEN  &trans  &trans  &trans  &trans
+&kp STAR  &kp FSLH   &kp N4  &kp N5  &kp N6  &trans  &trans      &trans           &trans  &trans  &trans  &trans
+&trans    &trans     &kp N1  &kp N2  &kp N3  &kp N0  &trans      &trans           &trans  &trans  &trans  &trans
+                     &trans  &trans  &trans  &trans  &trans      &trans           &trans  &trans
             >;
 
             label = "NUM MISC";
