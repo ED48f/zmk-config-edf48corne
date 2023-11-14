@@ -116,8 +116,8 @@
 
             label = "NUM MISC";
             sensor-bindings =
-                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>,
-                <&inc_dec_kp UP_ARROW DOWN_ARROW>;
+                <&inc_dec_kp UP_ARROW DOWN_ARROW>,
+                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
 
         FPS_LAYER {
