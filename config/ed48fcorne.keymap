@@ -14,11 +14,11 @@
 
 / {
     behaviors {
-        LSHIFT_CAPS: LSHIFT_CAPS {
+        LSHIFT_LCTRLCAPSL_TD: LSHIFT_LCTRLCAPSL_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "LSHIFT_CAPS";
+            label = "LSHIFT_LCTRLCAPSL_TD";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
+            bindings = <&kp LSHFT>, <&kp LCTRL>, <&kp CAPSLOCK>;
         };
     };
 
@@ -46,6 +46,9 @@
         };
     };
 
+    macros {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -57,10 +60,10 @@
             //              |     | GUI | LWR | SPC |   | ENT | RSE  | ALT |     |
 
             bindings = <
-&kp ESCAPE    &kp Q  &kp W              &kp F  &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y         &kp SEMICOLON  &kp BSPC
-&kp TAB       &kp A  &kp R              &kp S  &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
-&LSHIFT_CAPS  &kp Z  &kp X              &kp C  &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT       &kp FSLH       &kp RCMD
-                     &ext_power EP_TOG  &mo 3  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RALT   &out OUT_TOG
+&kp ESCAPE             &kp Q  &kp W              &kp F  &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y         &kp SEMICOLON  &kp BSPC
+&kp TAB                &kp A  &kp R              &kp S  &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
+&LSHIFT_LCTRLCAPSL_TD  &kp Z  &kp X              &kp C  &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT       &kp FSLH       &kp LGUI
+                              &ext_power EP_TOG  &mo 3  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RALT   &out OUT_TOG
             >;
 
             sensor-bindings =
@@ -78,17 +81,17 @@
             //              |     | GUI |     | SPC |   | ENT |     | ALT |     |
 
             bindings = <
-&kp GRAVE       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6   &kp N7  &kp N8    &kp N9  &kp N0   &kp MINUS
-&kp LEFT_SHIFT  &kt F1        &kt F2        &kt F3        &kt F4        &kt F5        &kt F6   &kt F7  &kt F8    &kt F9  &kt F10  &kt F11
-&kp LCTRL       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none    &none   &none     &none   &none    &bt BT_CLR
-                              &none         &none         &none         &kp SPACE     &kp RET  &none   &kp RALT  &none
+&kp GRAVE       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6  &kp N7  &kp N8    &kp N9  &kp N0   &kp MINUS
+&kp LEFT_SHIFT  &kt F1        &kt F2        &kt F3        &kt F4        &kt F5        &kt F6  &kt F7  &kt F8    &kt F9  &kt F10  &kt F11
+&kp LCTRL       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none   &none   &none     &none   &none    &bt BT_CLR
+                              &none         &none         &none         &trans        &trans  &none   &kp RALT  &none
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>,
                 <&inc_dec_kp PG_UP PG_DN>;
 
-            label = "RAISE";
+            label = "RAISE . BT";
         };
 
         lower_layer {
@@ -102,22 +105,22 @@
 &kp TILDE   &kp EXCL  &kp AT                  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET        &kp AMPS         &kp ASTERISK     &kp LPAR          &kp RPAR         &kp UNDERSCORE
 &sk LSHIFT  &none     &none                   &none     &none     &none      &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD   &none            &none
 &kp LCTRL   &none     &none                   &none     &none     &none      &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD   &rgb_ug RGB_SPI  &rgb_ug RGB_SPD
-                      &kp C_BACKLIGHT_TOGGLE  &none     &none     &kp SPACE  &kp RET          &none            &kp RALT         &kp C_PLAY_PAUSE
+                      &kp C_BACKLIGHT_TOGGLE  &none     &none     &trans     &trans           &none            &kp RALT         &kp C_PLAY_PAUSE
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_BRI_UP C_BRI_DN>,
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
                 <&inc_dec_kp C_NEXT C_PREVIOUS>;
 
-            label = "LOWER";
+            label = "LOWER . RGB";
         };
 
         NUM_LAYER {
             bindings = <
-&kp PLUS  &kp MINUS  &kp N7  &kp N8  &kp N9  &trans     &kp K_LOCK  &kp PRINTSCREEN  &kp UP         &trans     &trans  &kp DEL
-&kp STAR  &kp FSLH   &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans      &kp LEFT         &kp DOWN       &kp RIGHT  &trans  &trans
-&trans    &trans     &kp N1  &kp N2  &kp N3  &kp N0     &trans      &trans           &trans         &trans     &trans  &trans
-                     &trans  &trans  &trans  &trans     &trans      &trans           &kp RIGHT_ALT  &trans
+&kp PLUS  &kp MINUS  &kp N7  &kp N8  &kp N9  &trans     &kp K_LOCK   &kp PRINTSCREEN  &kp UP         &trans     &trans  &kp DEL
+&kp STAR  &kp FSLH   &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp C_SLEEP  &kp LEFT         &kp DOWN       &kp RIGHT  &trans  &trans
+&trans    &trans     &kp N1  &kp N2  &kp N3  &kp N0     &trans       &trans           &trans         &trans     &trans  &trans
+                     &trans  &trans  &trans  &trans     &trans       &trans           &kp RIGHT_ALT  &trans
             >;
 
             label = "NUM MISC";
@@ -128,10 +131,10 @@
 
         FPS_LAYER {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB  &kp F      &kp Q  &kp W      &kp E      &kp N1  &kp F1  &none  &none  &none  &none  &none
+&kp B    &kp V      &kp A  &kp S      &kp D      &kp N2  &none   &none  &none  &none  &none  &none
+&none    &kp LCTRL  &none  &kp C      &kp R      &kp N3  &none   &kp H  &none  &none  &none  &to 0
+                    &none  &kp LSHFT  &kp SPACE  &trans  &trans  &mo 3  &mo 0  &none
             >;
 
             label = "FPS GAME";
@@ -139,10 +142,10 @@
 
         RPG_LAYER {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&none  &kp N1  &kp N2  &kp N3   &kp N4     &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &kp F1
+&none  &kp Q   &kp W   &kp E    &kp R      &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P     &none
+&none  &kp A   &kp S   &kp D    &kp F      &kp G   &kp H   &kp J   &kp K   &kp L   &kp SEMI  &to 0
+               &none   &kp TAB  &kp SPACE  &trans  &trans  &mo 3   &mo 0   &none
             >;
 
             label = "RPG GAME";
