@@ -117,10 +117,10 @@
 
         NUM_LAYER {
             bindings = <
-&kp PLUS  &kp MINUS  &kp N7  &kp N8  &kp N9  &trans     &kp K_LOCK   &kp PRINTSCREEN  &kp UP         &trans     &trans  &kp DEL
-&kp STAR  &kp FSLH   &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp C_SLEEP  &kp LEFT         &kp DOWN       &kp RIGHT  &trans  &trans
-&trans    &trans     &kp N1  &kp N2  &kp N3  &kp N0     &trans       &trans           &trans         &trans     &trans  &trans
-                     &trans  &trans  &trans  &trans     &trans       &trans           &kp RIGHT_ALT  &trans
+&kp PLUS  &kp MINUS  &kp N7  &kp N8  &kp N9  &trans     &kp K_COFFEE  &kp PRINTSCREEN  &kp UP         &trans     &trans  &kp DEL
+&kp STAR  &kp FSLH   &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp K_SLEEP   &kp LEFT         &kp DOWN       &kp RIGHT  &trans  &trans
+&trans    &trans     &kp N1  &kp N2  &kp N3  &kp N0     &trans        &trans           &trans         &trans     &trans  &trans
+                     &trans  &trans  &trans  &trans     &trans        &trans           &kp RIGHT_ALT  &trans
             >;
 
             label = "NUM MISC";
