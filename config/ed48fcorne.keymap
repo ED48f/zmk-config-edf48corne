@@ -27,6 +27,27 @@
             #binding-cells = <0>;
             bindings = <&mo 3>, <&kp LEFT_ALT>;
         };
+
+        NO4_FPS_TD: NO4_FPS_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NO4_FPS_TD";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp N4>;
+        };
+
+        NO5_FPS_TD: NO5_FPS_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NO5_FPS_TD";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp N5>;
+        };
+
+        NO6_FPS_TD: NO6_FPS_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NO6_FPS_TD";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp N6>;
+        };
     };
 
     combos {
@@ -138,10 +159,10 @@
 
         FPS_LAYER {
             bindings = <
-&kp TAB  &kp F  &kp Q  &kp W      &kp E       &kp N1  &kp F1  &none  &none  &none  &none  &kp ESCAPE
-&kp B    &kp V  &kp A  &kp S      &kp D       &kp N2  &none   &none  &none  &none  &none  &none
-&kp T    &kp Z  &kp X  &kp C      &kp R       &kp N3  &none   &kp H  &none  &none  &none  &to 0
-                &none  &kp LCTRL  &kp LSHIFT  &trans  &trans  &mo 3  &mo 0  &none
+&kp TAB  &kp F  &kp Q  &kp W      &kp E       &NO4_FPS_TD  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp ESCAPE
+&kp B    &kp V  &kp A  &kp S      &kp D       &NO5_FPS_TD  &kp M   &kp N   &none   &kp I   &kp O   &none
+&kp T    &kp Z  &kp X  &kp C      &kp R       &NO6_FPS_TD  &kp K   &kp H   &none   &none   &none   &to 0
+                &none  &kp LCTRL  &kp LSHIFT  &trans       &trans  &none   &none   &none
             >;
 
             label = "FPS GAME";
