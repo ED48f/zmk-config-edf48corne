@@ -43,12 +43,12 @@
         };
 
         FPS_G_LAY {
-            bindings = <&tog 4>;
+            bindings = <&to 4>;
             key-positions = <41 40>;
         };
 
         RPG_G_LAY {
-            bindings = <&tog 5>;
+            bindings = <&to 5>;
             key-positions = <42 41>;
         };
     };
