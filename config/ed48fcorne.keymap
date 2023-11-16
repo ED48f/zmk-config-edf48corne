@@ -111,7 +111,7 @@
                 <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>,
                 <&inc_dec_kp PG_UP PG_DN>;
 
-            label = "RAISE / BT";
+            label = "RAISE . BT";
         };
 
         lower_layer {
@@ -132,7 +132,7 @@
                 <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
                 <&inc_dec_kp C_NEXT C_PREVIOUS>;
 
-            label = "LOWER / RGB";
+            label = "LOWER . RGB";
         };
 
         NUM_LAYER {
