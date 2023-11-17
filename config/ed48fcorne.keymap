@@ -89,12 +89,12 @@
         compatible = "zmk,combos";
 
         ACAD_LAY {
-            bindings = <&mo 6>;
+            bindings = <&to 6>;
             key-positions = <37 38>;
         };
 
         MAX3DS_LAY {
-            bindings = <&mo 7>;
+            bindings = <&to 7>;
             key-positions = <38 39>;
         };
 
