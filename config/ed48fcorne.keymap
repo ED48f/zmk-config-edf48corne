@@ -20,7 +20,7 @@
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&kp LCTRL>, <&kp CAPSLOCK>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <400>;
         };
 
         MO3_LALT_TD: MO3_LALT_TD {
@@ -29,7 +29,7 @@
             #binding-cells = <0>;
             bindings = <&mo 3>, <&kp LEFT_ALT>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <400>;
         };
 
         NO4_FPS_TD: NO4_FPS_TD {
@@ -37,6 +37,8 @@
             label = "NO4_FPS_TD";
             #binding-cells = <0>;
             bindings = <&kp N1>, <&kp N4>;
+
+            tapping-term-ms = <400>;
         };
 
         NO5_FPS_TD: NO5_FPS_TD {
@@ -44,6 +46,8 @@
             label = "NO5_FPS_TD";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp N5>;
+
+            tapping-term-ms = <400>;
         };
 
         NO6_FPS_TD: NO6_FPS_TD {
@@ -51,13 +55,15 @@
             label = "NO6_FPS_TD";
             #binding-cells = <0>;
             bindings = <&kp N3>, <&kp N6>;
+
+            tapping-term-ms = <400>;
         };
 
         ACAD_DIM_TD: ACAD_DIM_TD {
             compatible = "zmk,behavior-tap-dance";
             label = "ACAD_DIM_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <400>;
             bindings = <&ACAD_DIML>, <&ACAD_DIMNTCON>;
         };
 
@@ -66,6 +72,8 @@
             label = "ACAD_E_REGEN_TD";
             #binding-cells = <0>;
             bindings = <&ACAD_ERASE>, <&ACAD_REGEN>;
+
+            tapping-term-ms = <400>;
         };
 
         ACAD_MTPROP_MLD_TD: ACAD_MTPROP_MLD_TD {
@@ -73,6 +81,8 @@
             label = "ACAD_MTPROP_MLD_TD";
             #binding-cells = <0>;
             bindings = <&ACAD_MATCHPROP>, <&ACAD_MLD>;
+
+            tapping-term-ms = <400>;
         };
 
         ACAD_PLINE_PLEDIT_TD: ACAD_PLINE_PLEDIT_TD {
