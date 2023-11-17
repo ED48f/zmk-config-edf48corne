@@ -19,6 +19,8 @@
             label = "LSHIFT_LCTRLCAPSL_TD";
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&kp LCTRL>, <&kp CAPSLOCK>;
+
+            tapping-term-ms = <300>;
         };
 
         MO3_LALT_TD: MO3_LALT_TD {
@@ -26,6 +28,8 @@
             label = "MO3_LALT_TD";
             #binding-cells = <0>;
             bindings = <&mo 3>, <&kp LEFT_ALT>;
+
+            tapping-term-ms = <300>;
         };
 
         NO4_FPS_TD: NO4_FPS_TD {
