@@ -386,4 +386,23 @@
             label = "3DSMAX";
         };
     };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        FPS_DEF {
+            if-layers = <4>;
+            then-layer = <0>;
+        };
+
+        FPS_RAISE {
+            if-layers = <4>;
+            then-layer = <1>;
+        };
+
+        ACAD_DEF {
+            if-layers = <6>;
+            then-layer = <0>;
+        };
+    };
 };
