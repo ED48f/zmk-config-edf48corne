@@ -75,6 +75,114 @@
     };
 
     macros {
+        ACAD_L: ACAD_L {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp I &kp N &kp E &kp ENTER>;
+            label = "ACAD_L";
+        };
+
+        ACAD_LEXT: ACAD_LEXT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp X &kp T &kp RET>;
+            label = "ACAD_LEXT";
+        };
+
+        ACAD_REGEN: ACAD_REGEN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp E &kp RET>;
+            label = "ACAD_REGEN";
+        };
+
+        ACAD_RECT: ACAD_RECT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp E &kp C &kp T &kp RET>;
+            label = "ACAD_RECT";
+        };
+
+        ACAD_DIML: ACAD_DIML {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp I &kp M &kp L &kp RET>;
+            label = "ACAD_DIML";
+        };
+
+        ACAD_CIRL: ACAD_CIRL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp I &kp R &kp L &kp RET>;
+            label = "ACAD_CIRL";
+        };
+
+        ACAD_BLKEDIT: ACAD_BLKEDIT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp B &kp E &kp D &kp I &kp T &kp RET>;
+            label = "ACAD_BLKEDIT";
+        };
+
+        ACAD_ROT: ACAD_ROT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp O &kp T &kp RET>;
+            label = "ACAD_ROT";
+        };
+
+        ACAD_DIMNTCON: ACAD_DIMNTCON {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp I &kp M &kp C &kp RET>;
+            label = "ACAD_DIMNTCON";
+        };
+
+        ACAD_PLINE: ACAD_PLINE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp L &kp I &kp N &kp E &kp RET>;
+            label = "ACAD_PLINE";
+        };
+
+        ACAD_MOVE: ACAD_MOVE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp O &kp V &kp E &kp RET>;
+            label = "ACAD_MOVE";
+        };
+
+        ACAD_XLINE: ACAD_XLINE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp X &kp L &kp I &kp N &kp E &kp RET>;
+            label = "ACAD_XLINE";
+        };
+
+        ACAD_QCALC: ACAD_QCALC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N8)>;
+            label = "ACAD_QCALC";
+        };
+
+        ACAD_ML: ACAD_ML {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp L &kp I &kp N &kp E &kp RET>;
+            label = "ACAD_ML";
+        };
+
+        ACAD_FILTR: ACAD_FILTR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp F &kp RET &kp R &kp RET>,
+                <&macro_pause_for_release>,
+                <&kp M &kp RET>;
+
+            label = "ACAD_FILTR";
+        };
     };
 
     keymap {
