@@ -183,6 +183,20 @@
 
             label = "ACAD_FILTR";
         };
+
+        ACAD_SNAPANG: ACAD_SNAPANG {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp N &kp A &kp P &kp A &kp N &kp G &kp RET>;
+            label = "ACAD_SNAPANG";
+        };
+
+        ACAD_MLD: ACAD_MLD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp L &kp D &kp RET>;
+            label = "ACAD_MLD";
+        };
     };
 
     keymap {
