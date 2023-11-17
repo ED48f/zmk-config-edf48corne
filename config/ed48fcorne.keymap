@@ -74,6 +74,15 @@
             #binding-cells = <0>;
             bindings = <&ACAD_MATCHPROP>, <&ACAD_MLD>;
         };
+
+        ACAD_PEDIT_PLINE_TD: ACAD_PEDIT_PLINE_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ACAD_PEDIT_PLINE_TD";
+            #binding-cells = <0>;
+            bindings = <&ACAD_PLINE>, <&ACAD_PLINEDIT>;
+
+            tapping-term-ms = <400>;
+        };
     };
 
     combos {
@@ -244,6 +253,13 @@
             bindings = <&kp C &kp O &kp RET>;
             label = "ACAD_COPY";
         };
+
+        ACAD_PLINEDIT: ACAD_PLINEDIT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp P &kp E &kp RET>;
+            label = "ACAD_PLINEDIT";
+        };
     };
 
     keymap {
@@ -350,10 +366,10 @@
 
         ACAD_LAY {
             bindings = <
-&kp ESC        &ACAD_XLINE  &ACAD_PLINE    &ACAD_ML    &ACAD_L              &ACAD_E_REGEN_TD  &kp F3  &kp F8  &kp F9  &kp F10  &trans  &trans
-&kp TAB        &ACAD_ARC    &ACAD_RECT     &ACAD_ROT   &ACAD_MOVE           &ACAD_DIM_TD      &trans  &trans  &trans  &trans   &trans  &trans
-&ACAD_BLKEDIT  &ACAD_QCALC  &ACAD_SNAPANG  &ACAD_COPY  &ACAD_MTPROP_MLD_TD  &ACAD_FILTR       &trans  &trans  &trans  &trans   &trans  &trans
-                            &trans         &mo 3       &mo 0                &trans            &trans  &mo 1   &trans  &trans
+&kp ESC        &ACAD_XLINE  &ACAD_PEDIT_PLINE_TD  &ACAD_ML    &ACAD_L              &ACAD_E_REGEN_TD  &kp F3  &kp F8  &kp F9  &kp F10  &trans  &trans
+&kp TAB        &ACAD_ARC    &ACAD_RECT            &ACAD_ROT   &ACAD_MOVE           &ACAD_DIM_TD      &trans  &trans  &trans  &trans   &trans  &trans
+&ACAD_BLKEDIT  &ACAD_QCALC  &ACAD_SNAPANG         &ACAD_COPY  &ACAD_MTPROP_MLD_TD  &ACAD_FILTR       &trans  &trans  &trans  &trans   &trans  &trans
+                            &trans                &mo 3       &mo 0                &trans            &trans  &mo 1   &trans  &trans
             >;
 
             label = "ACAD";
