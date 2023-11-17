@@ -275,7 +275,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-        
             bindings = <
 &kp ESCAPE             &kp Q  &kp W              &kp F  &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y         &kp SEMICOLON  &kp BSPC
 &WIN_TAB_TD            &kp A  &kp R              &kp S  &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
@@ -291,7 +290,6 @@
         };
 
         raise_layer {
-        
             bindings = <
 &kp GRAVE       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6  &kp N7  &kp N8    &kp N9  &kp N0   &kp MINUS
 &kp LEFT_SHIFT  &kt F1        &kt F2        &kt F3        &kt F4        &kt F5        &kt F6  &kt F7  &kt F8    &kt F9  &kt F10  &kt F11
@@ -307,7 +305,6 @@
         };
 
         lower_layer {
-         
             bindings = <
 &kp TILDE   &kp EXCL  &kp AT      &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET        &kp AMPS         &kp ASTERISK     &kp LPAR          &kp RPAR         &kp UNDERSCORE
 &sk LSHIFT  &none     &none       &none     &none     &none      &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD   &none            &none
@@ -319,7 +316,7 @@
                 <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
                 <&inc_dec_kp C_NEXT C_PREVIOUS>;
 
-            label = "LOWER RGB";
+            label = "LOWER";
         };
 
         NUM_LAYER {
