@@ -197,6 +197,13 @@
             bindings = <&kp M &kp L &kp D &kp RET>;
             label = "ACAD_MLD";
         };
+
+        ACAD_MATCHPROP: ACAD_MATCHPROP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp A &kp RET>;
+            label = "ACAD_MATCHPROP";
+        };
     };
 
     keymap {
