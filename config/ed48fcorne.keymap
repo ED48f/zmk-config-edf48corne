@@ -99,12 +99,12 @@
 
         ACAD_LAY {
             bindings = <&tog 6>;
-            key-positions = <37 38>;
+            key-positions = <0 12>;
         };
 
         MAX3DS_LAY {
             bindings = <&tog 7>;
-            key-positions = <38 39>;
+            key-positions = <12 24>;
         };
 
         FPS_G_LAY {
