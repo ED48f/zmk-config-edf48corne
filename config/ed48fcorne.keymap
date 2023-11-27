@@ -14,11 +14,11 @@
 
 / {
     behaviors {
-        LSHIFT_LCTRLCAPSL_TD: LSHIFT_LCTRLCAPSL_TD {
+        LSHIFT_LCTRL_CAPSL_TD: LSHIFT_LCTRL_CAPSL_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "LSHIFT_LCTRLCAPSL_TD";
+            label = "LSHIFT_LCTRL_CAPSL_TD";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp LCTRL>, <&kp CAPSLOCK>;
+            bindings = <&kp LSHFT>, <&sk LCTRL>, <&kp CAPSLOCK>;
 
             tapping-term-ms = <400>;
         };
@@ -292,10 +292,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE   &kp Q  &kp W              &kp F                  &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
-&WIN_TAB_TD  &kp A  &kp R              &kp S                  &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
-&NUM_TD      &kp Z  &kp X              &kp C                  &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT       &kp FSLH       &kp LGUI
-                    &ext_power EP_TOG  &LSHIFT_LCTRLCAPSL_TD  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RALT   &out OUT_TOG
+&kp ESCAPE   &kp Q  &kp W              &kp F                   &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
+&WIN_TAB_TD  &kp A  &kp R              &kp S                   &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
+&NUM_TD      &kp Z  &kp X              &kp C                   &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT       &kp FSLH       &kp LGUI
+                    &ext_power EP_TOG  &LSHIFT_LCTRL_CAPSL_TD  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RALT   &out OUT_TOG
             >;
 
             sensor-bindings =
