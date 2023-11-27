@@ -108,6 +108,17 @@
             tapping-term-ms = <150>;
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
+
+        TAB_KEYREP_HT: TAB_KEYREP_HT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAB_KEYREP_HT";
+            bindings = <&key_repeat>, <&WIN_TAB_TD>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <180>;
+            flavor = "balanced";
+        };
     };
 
     combos {
@@ -292,10 +303,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE   &kp Q  &kp W              &kp F                   &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
-&WIN_TAB_TD  &kp A  &kp R              &kp S                   &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
-&NUM_TD      &kp Z  &kp X              &kp C                   &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT       &kp FSLH       &kp LGUI
-                    &ext_power EP_TOG  &LSHIFT_LCTRL_CAPSL_TD  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RALT   &out OUT_TOG
+&kp ESCAPE          &kp Q  &kp W              &kp F                   &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
+&TAB_KEYREP_HT 0 0  &kp A  &kp R              &kp S                   &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
+&NUM_TD             &kp Z  &kp X              &kp C                   &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT       &kp FSLH       &kp LGUI
+                           &ext_power EP_TOG  &LSHIFT_LCTRL_CAPSL_TD  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RALT   &out OUT_TOG
             >;
 
             sensor-bindings =
