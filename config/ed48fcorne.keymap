@@ -239,11 +239,7 @@
         ACAD_FILTR: ACAD_FILTR {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp F &kp RET &kp R &kp RET>,
-                <&macro_pause_for_release>,
-                <&kp M &kp RET>;
-
+            bindings = <&kp F &kp RET &kp R &kp RET>;
             label = "ACAD_FILTR";
         };
 
