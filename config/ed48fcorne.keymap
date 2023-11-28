@@ -125,7 +125,7 @@
         compatible = "zmk,combos";
 
         ACAD_LAY {
-            bindings = <&tog 8>;
+            bindings = <&tog 6>;
             key-positions = <0 12>;
         };
 
