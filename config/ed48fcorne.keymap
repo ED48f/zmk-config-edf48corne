@@ -354,10 +354,10 @@
 
         NUM_LAYER {
             bindings = <
-&kp PLUS  &kp MINUS  &kp N7                  &kp N8  &kp N9     &kp ESCAPE  &kp K_COFFEE  &kp PRINTSCREEN  &kp UP         &trans     &trans  &kp DEL
-&kp STAR  &kp FSLH   &kp N4                  &kp N5  &kp N6     &none       &kp K_SLEEP   &kp LEFT         &kp DOWN       &kp RIGHT  &trans  &trans
-&trans    &kp DOT    &kp N1                  &kp N2  &kp N3     &none       &trans        &trans           &trans         &trans     &trans  &trans
-                     &kp C_BACKLIGHT_TOGGLE  &kp N0  &kp EQUAL  &trans      &trans        &trans           &kp RIGHT_ALT  &trans
+&kp KP_PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8         &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp ESCAPE      &kp K_SCREENSAVER  &kp PRINTSCREEN  &kp UP         &trans     &trans  &kp DEL
+&kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5         &kp KP_NUMBER_6  &kp KP_DIVIDE    &none           &kp K_SLEEP        &kp LEFT         &kp DOWN       &kp RIGHT  &trans  &trans
+&trans        &kp KP_NUMBER_1  &kp KP_NUMBER_2         &kp KP_NUMBER_3  &kp KP_DOT       &kp KP_NUMLOCK  &trans             &trans           &trans         &trans     &trans  &trans
+                               &kp C_BACKLIGHT_TOGGLE  &kp KP_NUMBER_0  &kp EQUAL        &trans          &trans             &trans           &kp RIGHT_ALT  &trans
             >;
 
             label = "NUM MISC";
