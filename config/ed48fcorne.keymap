@@ -89,7 +89,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "WIN_TAB_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             bindings = <&kp TAB>, <&kp RA(TAB)>, <&kp LA(TAB)>;
         };
 
@@ -115,7 +115,7 @@
             bindings = <&key_repeat>, <&WIN_TAB_TD>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <180>;
         };
     };
