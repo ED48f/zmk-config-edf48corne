@@ -180,11 +180,11 @@
             label = "ACAD_DIML";
         };
 
-        ACAD_ARC: ACAD_ARC {
+        ACAD_MR: ACAD_MR {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp A &kp R &kp C &kp RET>;
-            label = "ACAD_ARC";
+            bindings = <&kp M &kp R &kp RET>;
+            label = "ACAD_MR";
         };
 
         ACAD_BLKEDIT: ACAD_BLKEDIT {
@@ -413,7 +413,7 @@
         ACAD_MCRO {
             bindings = <
 &kp ESC        &ACAD_XLINE  &ACAD_PLINE_PLEDIT_TD  &ACAD_ML    &ACAD_L              &ACAD_E_REGEN_TD  &kp F3  &kp F8  &kp F9  &kp F10  &trans  &trans
-&ACAD_OFSET    &ACAD_ARC    &ACAD_RECT             &ACAD_ROT   &ACAD_MOVE           &ACAD_DIM_TD      &trans  &trans  &trans  &trans   &trans  &trans
+&ACAD_OFSET    &ACAD_MR     &ACAD_RECT             &ACAD_ROT   &ACAD_MOVE           &ACAD_DIM_TD      &trans  &trans  &trans  &trans   &trans  &trans
 &ACAD_BLKEDIT  &ACAD_QCALC  &ACAD_SNAPANG          &ACAD_COPY  &ACAD_MTPROP_MLD_TD  &ACAD_FILTR       &trans  &trans  &trans  &trans   &trans  &trans
                             &trans                 &none       &trans               &trans            &trans  &trans  &trans  &trans
             >;
