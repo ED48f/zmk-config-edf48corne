@@ -183,7 +183,7 @@
         ACAD_MR: ACAD_MR {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp M &kp R &kp RET>;
+            bindings = <&kp M &kp I &kp RET>;
             label = "ACAD_MR";
         };
 
