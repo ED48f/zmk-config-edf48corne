@@ -105,7 +105,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BCKSPC_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <150>;
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
 
