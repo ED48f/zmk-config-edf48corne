@@ -85,12 +85,12 @@
             tapping-term-ms = <300>;
         };
 
-        WIN_TAB_TD: WIN_TAB_TD {
+        WIN_TSKMGR_TD: WIN_TSKMGR_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "WIN_TAB_TD";
+            label = "WIN_TSKMGR_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp TAB>, <&kp RA(TAB)>, <&kp LA(TAB)>;
+            tapping-term-ms = <150>;
+            bindings = <&kp LEFT_GUI>, <&kp LA(LC(DEL))>;
         };
 
         NUM_NUMTOG_CAPSL_TD: NUM_NUMTOG_CAPSL_TD {
@@ -112,7 +112,7 @@
         TAB_KEYREP_HT: TAB_KEYREP_HT {
             compatible = "zmk,behavior-hold-tap";
             label = "TAB_KEYREP_HT";
-            bindings = <&key_repeat>, <&WIN_TAB_TD>;
+            bindings = <&key_repeat>, <&WIN_TSKMGR_TD>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
@@ -300,7 +300,7 @@
             bindings = <
 &kp ESCAPE            &kp Q  &kp W              &kp F                 &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
 &TAB_KEYREP_HT 0 0    &kp A  &kp R              &kp S                 &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
-&NUM_NUMTOG_CAPSL_TD  &kp Z  &kp X              &kp C                 &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT       &kp FSLH       &kp LGUI
+&NUM_NUMTOG_CAPSL_TD  &kp Z  &kp X              &kp C                 &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT       &kp FSLH       &WIN_TSKMGR_TD
                              &ext_power EP_TOG  &LCTRL_LSHFT_LALT_TD  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RALT   &out OUT_TOG
             >;
 
