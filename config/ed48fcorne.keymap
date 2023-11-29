@@ -390,13 +390,14 @@
 
         MAX3D_LAY {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 3   &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+                &kp LC(X)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "3DSMAX";
+            sensor-bindings = <&inc_dec_kp LBKT RBKT>;
         };
 
         ACAD_MCRO {
