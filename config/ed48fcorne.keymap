@@ -123,6 +123,15 @@
             tapping-term-ms = <200>;
             bindings = <&kp LCTRL>, <&kp LEFT_ALT>;
         };
+
+        LSHFT_FLEEXP_TD: LSHFT_FLEEXP_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LSHFT_FLEEXP_TD";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT>, <&kp LG(E)>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     combos {
@@ -303,10 +312,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE            &kp Q  &kp W              &kp F                 &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
-&TAB_WINTAB_TD        &kp A  &kp R              &kp S                 &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
-&NUM_NUMTOG_CAPSL_TD  &kp Z  &kp X              &kp C                 &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT       &kp FSLH       &WIN_TSKMGR_WSPCSCHW_TD
-                             &ext_power EP_TOG  &LCTRL_LSHFT_LALT_TD  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp LSHFT  &out OUT_TOG
+&kp ESCAPE            &kp Q  &kp W              &kp F                 &kp P  &kp B      &kp J    &kp L  &kp U             &kp Y         &kp SEMICOLON  &BCKSPC_TD
+&TAB_WINTAB_TD        &kp A  &kp R              &kp S                 &kp T  &kp G      &kp M    &kp N  &kp E             &kp I         &kp O          &kp SQT
+&NUM_NUMTOG_CAPSL_TD  &kp Z  &kp X              &kp C                 &kp D  &kp V      &kp K    &kp H  &kp COMMA         &kp DOT       &kp FSLH       &WIN_TSKMGR_WSPCSCHW_TD
+                             &ext_power EP_TOG  &LCTRL_LSHFT_LALT_TD  &mo 1  &kp SPACE  &kp RET  &mo 2  &LSHFT_FLEEXP_TD  &out OUT_TOG
             >;
 
             sensor-bindings =
