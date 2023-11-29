@@ -108,21 +108,11 @@
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
 
-        TAB_KEYREP_HT: TAB_KEYREP_HT {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAB_KEYREP_HT";
-            bindings = <&key_repeat>, <&TAB_WINTAB_TD>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-        };
-
         TAB_WINTAB_TD: TAB_WINTAB_TD {
             compatible = "zmk,behavior-tap-dance";
             label = "TAB_WINTAB_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <210>;
+            tapping-term-ms = <220>;
             bindings = <&kp TAB>, <&kp LC(LA(TAB))>, <&kp LA(TAB)>;
         };
     };
@@ -306,7 +296,7 @@
         default_layer {
             bindings = <
 &kp ESCAPE            &kp Q  &kp W              &kp F                 &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
-&TAB_KEYREP_HT 0 0    &kp A  &kp R              &kp S                 &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
+&TAB_WINTAB_TD        &kp A  &kp R              &kp S                 &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
 &NUM_NUMTOG_CAPSL_TD  &kp Z  &kp X              &kp C                 &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT       &kp FSLH       &WIN_TSKMGR_TD
                              &ext_power EP_TOG  &LCTRL_LSHFT_LALT_TD  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp LSHFT  &out OUT_TOG
             >;
