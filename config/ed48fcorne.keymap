@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -85,12 +84,12 @@
             tapping-term-ms = <300>;
         };
 
-        WIN_TSKMGR_TD: WIN_TSKMGR_TD {
+        WIN_TSKMGR_WSPCSCHW_TD: WIN_TSKMGR_WSPCSCHW_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "WIN_TSKMGR_TD";
+            label = "WIN_TSKMGR_WSPCSCHW_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp LEFT_GUI>, <&kp LA(LC(DEL))>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LEFT_GUI>, <&kp LC(LGUI)>, <&kp LC(LA(DELETE))>;
         };
 
         NUM_NUMTOG_CAPSL_TD: NUM_NUMTOG_CAPSL_TD {
@@ -109,14 +108,29 @@
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
 
-        TAB_KEYREP_HT: TAB_KEYREP_HT {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAB_KEYREP_HT";
-            bindings = <&key_repeat>, <&WIN_TSKMGR_TD>;
-
-            #binding-cells = <2>;
+        TAB_WINTAB_TD: TAB_WINTAB_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAB_WINTAB_TD";
+            #binding-cells = <0>;
             tapping-term-ms = <300>;
-            quick-tap-ms = <180>;
+            bindings = <&kp TAB>, <&kp LC(LA(TAB))>, <&kp LA(TAB)>;
+        };
+
+        MAX_LCTRL_LALT_TD: MAX_LCTRL_LALT_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MAX_LCTRL_LALT_TD";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LCTRL>, <&kp LEFT_ALT>;
+        };
+
+        LSHFT_FLEEXP_TD: LSHFT_FLEEXP_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LSHFT_FLEEXP_TD";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT>, <&kp LG(E)>;
+
+            tapping-term-ms = <180>;
         };
     };
 
@@ -298,10 +312,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE            &kp Q  &kp W              &kp F                 &kp P  &kp B      &kp J    &kp L  &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
-&TAB_KEYREP_HT 0 0    &kp A  &kp R              &kp S                 &kp T  &kp G      &kp M    &kp N  &kp E      &kp I         &kp O          &kp SQT
-&NUM_NUMTOG_CAPSL_TD  &kp Z  &kp X              &kp C                 &kp D  &kp V      &kp K    &kp H  &kp COMMA  &kp DOT       &kp FSLH       &WIN_TSKMGR_TD
-                             &ext_power EP_TOG  &LCTRL_LSHFT_LALT_TD  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RALT   &out OUT_TOG
+&kp ESCAPE            &kp Q  &kp W              &kp F                 &kp P  &kp B      &kp J    &kp L  &kp U             &kp Y         &kp SEMICOLON  &BCKSPC_TD
+&TAB_WINTAB_TD        &kp A  &kp R              &kp S                 &kp T  &kp G      &kp M    &kp N  &kp E             &kp I         &kp O          &kp SQT
+&NUM_NUMTOG_CAPSL_TD  &kp Z  &kp X              &kp C                 &kp D  &kp V      &kp K    &kp H  &kp COMMA         &kp DOT       &kp FSLH       &WIN_TSKMGR_WSPCSCHW_TD
+                             &ext_power EP_TOG  &LCTRL_LSHFT_LALT_TD  &mo 1  &kp SPACE  &kp RET  &mo 2  &LSHFT_FLEEXP_TD  &out OUT_TOG
             >;
 
             sensor-bindings =
@@ -344,7 +358,7 @@
         NUM_LAYER {
             bindings = <
 &kp KP_PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8         &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp ESCAPE      &kp K_SCREENSAVER  &kp PRINTSCREEN  &kp UP         &trans     &trans  &kp DEL
-&kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5         &kp KP_NUMBER_6  &kp KP_DIVIDE    &none           &kp K_SLEEP        &kp LEFT         &kp DOWN       &kp RIGHT  &trans  &trans
+&kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5         &kp KP_NUMBER_6  &kp KP_DIVIDE    &kp BACKSPACE   &kp K_SLEEP        &kp LEFT         &kp DOWN       &kp RIGHT  &trans  &trans
 &trans        &kp KP_NUMBER_1  &kp KP_NUMBER_2         &kp KP_NUMBER_3  &kp KP_DOT       &kp KP_NUMLOCK  &trans             &trans           &trans         &trans     &trans  &trans
                                &kp C_BACKLIGHT_TOGGLE  &kp KP_NUMBER_0  &kp EQUAL        &trans          &trans             &trans           &kp RIGHT_ALT  &trans
             >;
@@ -390,10 +404,10 @@
 
         MAX3D_LAY {
             bindings = <
-&trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 3   &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-                &kp LC(X)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 3   &trans  &trans     &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+                &kp LC(X)  &MAX_LCTRL_LALT_TD  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "3DSMAX";
