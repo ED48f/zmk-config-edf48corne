@@ -19,7 +19,7 @@
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&sk LSHFT>, <&sk LEFT_ALT>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
         };
 
         NO4_FPS_TD: NO4_FPS_TD {
@@ -53,7 +53,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ACAD_DIM_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&ACAD_DIML>, <&ACAD_DIMNTCON>;
         };
 
@@ -63,7 +63,7 @@
             #binding-cells = <0>;
             bindings = <&ACAD_ERASE>, <&ACAD_REGEN>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
         };
 
         ACAD_MTPROP_MLD_TD: ACAD_MTPROP_MLD_TD {
@@ -72,7 +72,7 @@
             #binding-cells = <0>;
             bindings = <&ACAD_MATCHPROP>, <&ACAD_MLD>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
         };
 
         ACAD_PLINE_PLEDIT_TD: ACAD_PLINE_PLEDIT_TD {
@@ -88,7 +88,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "WIN_TSKMGR_WSPCSCHW_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp LEFT_GUI>, <&kp LC(LGUI)>, <&kp LC(LA(DELETE))>;
         };
 
@@ -96,7 +96,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUM_NUMTOG_CAPSL_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&mo 3>, <&kp CAPS>, <&tog 3>;
         };
 
@@ -104,7 +104,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BCKSPC_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
 
@@ -112,7 +112,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAB_WINTAB_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp TAB>, <&kp LC(LA(TAB))>, <&kp LA(TAB)>;
         };
 
@@ -130,7 +130,7 @@
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&kp LG(E)>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
         };
     };
 
