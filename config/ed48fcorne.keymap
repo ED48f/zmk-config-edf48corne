@@ -176,7 +176,7 @@
         ACAD_LEXT: ACAD_LEXT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp E &kp X &kp T &kp RET>;
+            bindings = <&kp E &kp X &kp T &kp E &kp N &kp D &kp RET>;
             label = "ACAD_LEXT";
         };
 
