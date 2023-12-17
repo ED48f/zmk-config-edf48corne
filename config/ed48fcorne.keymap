@@ -96,15 +96,15 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUM_NUMTOG_CAPSL_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&mo 3>, <&tog 3>, <&kp CAPSLOCK>;
+            tapping-term-ms = <200>;
+            bindings = <&mo 3>, <&kp CAPS>, <&tog 3>;
         };
 
         BCKSPC_TD: BCKSPC_TD {
             compatible = "zmk,behavior-tap-dance";
             label = "BCKSPC_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <130>;
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
 
@@ -112,7 +112,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAB_WINTAB_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&kp TAB>, <&kp LC(LA(TAB))>, <&kp LA(TAB)>;
         };
 
@@ -130,7 +130,7 @@
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&kp LG(E)>;
 
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
         };
     };
 
