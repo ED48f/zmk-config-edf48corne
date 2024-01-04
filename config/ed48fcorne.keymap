@@ -11,6 +11,11 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&sk {
+    quick-release;
+    release-after-ms = <300>;
+};
+
 / {
     behaviors {
         LCTRL_LSHFT_LALT_TD: LCTRL_LSHFT_LALT_TD {
