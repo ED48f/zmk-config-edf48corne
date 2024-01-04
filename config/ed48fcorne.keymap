@@ -128,9 +128,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LSHFT_FLEEXP_TD";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp LG(E)>;
+            bindings = <&sk LEFT_SHIFT>, <&kp LG(E)>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         ACAD_ESC_EXP_TD: ACAD_ESC_EXP_TD {
