@@ -501,6 +501,19 @@
 &trans  &trans       &trans       &trans       &trans       &trans       &trans  &trans  &trans  &trans  &trans  &trans
                      &trans       &trans       &trans       &trans       &trans  &trans  &trans  &trans
             >;
+
+            label = "3DS MACRO";
+        };
+
+        MAX_NUMLAY {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "MAX NUM";
         };
     };
 
