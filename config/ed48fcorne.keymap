@@ -157,6 +157,8 @@
             label = "MAX_Q_1_F12_TD";
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp N1>, <&kp F12>;
+
+            tapping-term-ms = <250>;
         };
 
         MAX_W_2_F13_TD: MAX_W_2_F13_TD {
