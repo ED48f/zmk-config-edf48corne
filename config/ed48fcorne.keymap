@@ -475,7 +475,7 @@
             bindings = <
 &trans  &MAX_Q_1_TD  &MAX_W_2_TD    &MAX_F_3_TD           &MAX_P_4_TD         &MAX_B_5_TD  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans       &trans         &trans                &trans              &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&mo 3   &trans       &trans         &trans                &trans              &trans       &trans  &trans  &trans  &trans  &trans  &to 0
+&mo 10  &trans       &trans         &trans                &trans              &trans       &trans  &trans  &trans  &trans  &trans  &to 0
                      &kp LA(LC(X))  &MAX_SHFT_RISELAY_TD  &MAX_LALT_LCTRL_TD  &trans       &trans  &trans  &trans  &trans
             >;
 
