@@ -145,11 +145,46 @@
             bindings = <&kp ESCAPE>, <&ACAD_EXPLODE>;
         };
 
-        MAX_SHFT_LWRLAY: MAX_SHFT_LWRLAY {
+        MAX_SHFT_RISELAY_TD: MAX_SHFT_RISELAY_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "MAX_SHFT_LWRLAY";
+            label = "MAX_SHFT_RISELAY_TD";
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&mo 9>, <&sl 1>;
+        };
+
+        MAX_Q_1_TD: MAX_Q_1_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MAX_Q_1_TD";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp N1>;
+        };
+
+        MAX_W_2_TD: MAX_W_2_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MAX_W_2_TD";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp N2>;
+        };
+
+        MAX_F_3_TD: MAX_F_3_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MAX_F_3_TD";
+            #binding-cells = <0>;
+            bindings = <&kp F>, <&kp N3>;
+        };
+
+        MAX_P_4_TD: MAX_P_4_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MAX_P_4_TD";
+            #binding-cells = <0>;
+            bindings = <&kp P>, <&kp N4>;
+        };
+
+        MAX_B_5_TD: MAX_B_5_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MAX_B_5_TD";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&kp N5>;
         };
     };
 
@@ -430,10 +465,10 @@
 
         MAX3D_LAY {
             bindings = <
-&trans  &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 3   &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-                &kp LA(LC(X))  &trans  &MAX_LALT_LCTRL_TD  &trans  &trans  &trans  &trans  &trans
+&trans  &MAX_Q_1_TD  &MAX_W_2_TD    &MAX_F_3_TD           &MAX_P_4_TD         &MAX_B_5_TD  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans         &trans                &trans              &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&mo 3   &trans       &trans         &trans                &trans              &trans       &trans  &trans  &trans  &trans  &trans  &to 0
+                     &kp LA(LC(X))  &MAX_SHFT_RISELAY_TD  &MAX_LALT_LCTRL_TD  &trans       &trans  &trans  &trans  &trans
             >;
 
             label = "3DSMAX";
@@ -453,10 +488,10 @@
 
         MAX_MACRO {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &MAX_Q_1_TD  &MAX_W_2_TD  &MAX_F_3_TD  &MAX_P_4_TD  &MAX_B_5_TD  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans       &trans       &trans       &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans       &trans       &trans       &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                     &trans       &trans       &trans       &trans       &trans  &trans  &trans  &trans
             >;
         };
     };
