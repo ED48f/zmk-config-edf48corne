@@ -152,39 +152,39 @@
             bindings = <&kp LSHFT>, <&mo 9>, <&sl 1>;
         };
 
-        MAX_Q_1_TD: MAX_Q_1_TD {
+        MAX_Q_1_F12_TD: MAX_Q_1_F12_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "MAX_Q_1_TD";
+            label = "MAX_Q_1_F12_TD";
             #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp N1>;
+            bindings = <&kp Q>, <&kp N1>, <&kp F12>;
         };
 
-        MAX_W_2_TD: MAX_W_2_TD {
+        MAX_W_2_F13_TD: MAX_W_2_F13_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "MAX_W_2_TD";
+            label = "MAX_W_2_F13_TD";
             #binding-cells = <0>;
-            bindings = <&kp W>, <&kp N2>;
+            bindings = <&kp W>, <&kp N2>, <&kp F13>;
         };
 
-        MAX_F_3_TD: MAX_F_3_TD {
+        MAX_F_3_F14_TD: MAX_F_3_F14_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "MAX_F_3_TD";
+            label = "MAX_F_3_F14_TD";
             #binding-cells = <0>;
-            bindings = <&kp F>, <&kp N3>;
+            bindings = <&kp F>, <&kp N3>, <&kp F14>;
         };
 
-        MAX_P_4_TD: MAX_P_4_TD {
+        MAX_P_4_F15_TD: MAX_P_4_F15_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "MAX_P_4_TD";
+            label = "MAX_P_4_F15_TD";
             #binding-cells = <0>;
-            bindings = <&kp P>, <&kp N4>;
+            bindings = <&kp P>, <&kp N4>, <&kp F15>;
         };
 
-        MAX_B_5_TD: MAX_B_5_TD {
+        MAX_B_5_F16_TD: MAX_B_5_F16_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "MAX_B_5_TD";
+            label = "MAX_B_5_F16_TD";
             #binding-cells = <0>;
-            bindings = <&kp B>, <&kp N5>;
+            bindings = <&kp B>, <&kp N5>, <&kp F16>;
         };
 
         NUM_BCKSPC_DEL_TD: NUM_BCKSPC_DEL_TD {
@@ -473,10 +473,10 @@
 
         MAX3D_LAY {
             bindings = <
-&trans  &MAX_Q_1_TD  &MAX_W_2_TD    &MAX_F_3_TD           &MAX_P_4_TD         &MAX_B_5_TD  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans         &trans                &trans              &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&mo 10  &trans       &trans         &trans                &trans              &trans       &trans  &trans  &trans  &trans  &trans  &to 0
-                     &kp LA(LC(X))  &MAX_SHFT_RISELAY_TD  &MAX_LALT_LCTRL_TD  &trans       &trans  &trans  &trans  &trans
+&trans  &MAX_Q_1_F12_TD  &MAX_W_2_F13_TD  &MAX_F_3_F14_TD       &MAX_P_4_F15_TD     &MAX_B_5_F16_TD  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &trans                &trans              &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&mo 10  &trans           &trans           &trans                &trans              &trans           &trans  &trans  &trans  &trans  &trans  &to 0
+                         &kp LA(LC(X))    &MAX_SHFT_RISELAY_TD  &MAX_LALT_LCTRL_TD  &trans           &trans  &trans  &trans  &trans
             >;
 
             label = "3DSMAX";
@@ -496,10 +496,10 @@
 
         MAX_MACRO {
             bindings = <
-&trans  &MAX_Q_1_TD  &MAX_W_2_TD  &MAX_F_3_TD  &MAX_P_4_TD  &MAX_B_5_TD  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans       &trans       &trans       &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans       &trans       &trans       &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                     &trans       &trans       &trans       &trans       &trans  &trans  &trans  &trans
+&trans  &MAX_Q_1_F12_TD  &MAX_W_2_F13_TD  &MAX_F_3_F14_TD  &MAX_P_4_F15_TD  &MAX_B_5_F16_TD  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &trans           &trans           &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &trans           &trans           &trans           &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans           &trans           &trans           &trans           &trans  &trans  &trans  &trans
             >;
 
             label = "3DS MACRO";
