@@ -149,7 +149,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MAX_SHFT_LWRLAY";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&sl 1>;
+            bindings = <&kp LSHFT>, <&mo 9>, <&sl 1>;
         };
     };
 
@@ -449,6 +449,15 @@
             >;
 
             label = "A.MCRO";
+        };
+
+        MAX_MACRO {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 
