@@ -121,12 +121,12 @@
             bindings = <&kp TAB>, <&kp LC(LA(TAB))>, <&kp LA(TAB)>;
         };
 
-        MAX_LCTRL_LALT_TD: MAX_LCTRL_LALT_TD {
+        MAX_LALT_LCTRL_TD: MAX_LALT_LCTRL_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "MAX_LCTRL_LALT_TD";
+            label = "MAX_LALT_LCTRL_TD";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LCTRL>, <&kp LEFT_ALT>;
+            bindings = <&kp LALT>, <&kp LCTRL>;
         };
 
         LSHFT_FLEEXP_TD: LSHFT_FLEEXP_TD {
@@ -143,6 +143,13 @@
             label = "ACAD_ESC_EXP_TD";
             #binding-cells = <0>;
             bindings = <&kp ESCAPE>, <&ACAD_EXPLODE>;
+        };
+
+        MAX_SHFT_LWRLAY: MAX_SHFT_LWRLAY {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MAX_SHFT_LWRLAY";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT>, <&sl 1>;
         };
     };
 
@@ -423,10 +430,10 @@
 
         MAX3D_LAY {
             bindings = <
-&trans  &trans  &trans     &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 3   &trans  &trans     &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-                &kp LC(X)  &trans  &MAX_LCTRL_LALT_TD  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 3   &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+                &kp LA(LC(X))  &trans  &MAX_LALT_LCTRL_TD  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "3DSMAX";
