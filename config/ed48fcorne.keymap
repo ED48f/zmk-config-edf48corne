@@ -186,6 +186,14 @@
             #binding-cells = <0>;
             bindings = <&kp B>, <&kp N5>;
         };
+
+        NUM_BCKSPC_DEL_TD: NUM_BCKSPC_DEL_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM_BCKSPC_DEL_TD";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+        };
     };
 
     combos {
@@ -418,10 +426,10 @@
 
         NUM_LAYER {
             bindings = <
-&kp KP_PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8         &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp ESCAPE      &kp K_SCREENSAVER  &kp PRINTSCREEN  &kp UP         &trans     &trans  &kp DEL
-&kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5         &kp KP_NUMBER_6  &kp KP_DIVIDE    &kp BACKSPACE   &kp K_SLEEP        &kp LEFT         &kp DOWN       &kp RIGHT  &trans  &trans
-&trans        &kp KP_NUMBER_1  &kp KP_NUMBER_2         &kp KP_NUMBER_3  &kp EQUAL        &kp KP_NUMLOCK  &trans             &trans           &trans         &trans     &trans  &trans
-                               &kp C_BACKLIGHT_TOGGLE  &kp KP_DOT       &kp KP_NUMBER_0  &trans          &trans             &trans           &kp RIGHT_ALT  &trans
+&kp KP_PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8         &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp ESCAPE          &kp K_SCREENSAVER  &kp PRINTSCREEN  &kp UP         &trans     &trans  &kp DEL
+&kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5         &kp KP_NUMBER_6  &kp KP_DIVIDE    &NUM_BCKSPC_DEL_TD  &kp K_SLEEP        &kp LEFT         &kp DOWN       &kp RIGHT  &trans  &trans
+&trans        &kp KP_NUMBER_1  &kp KP_NUMBER_2         &kp KP_NUMBER_3  &kp EQUAL        &kp KP_NUMLOCK      &trans             &trans           &trans         &trans     &trans  &trans
+                               &kp C_BACKLIGHT_TOGGLE  &kp KP_DOT       &kp KP_NUMBER_0  &trans              &trans             &trans           &kp RIGHT_ALT  &trans
             >;
 
             label = "NUM MISC";
