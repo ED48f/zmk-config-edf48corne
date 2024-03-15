@@ -117,7 +117,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAB_WINTAB_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             bindings = <&kp TAB>, <&kp LA(TAB)>, <&kp LA(LC(TAB))>;
         };
 
