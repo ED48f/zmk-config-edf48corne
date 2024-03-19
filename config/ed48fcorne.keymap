@@ -389,9 +389,7 @@
                              &ext_power EP_TOG  &mo 1  &LCTRL_LSHFT_LALT_TD  &kp SPACE  &kp RET  &LSHFT_FLEEXP_TD  &mo 2      &out OUT_TOG
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp UP_ARROW DOWN_ARROW>,
-                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
 
             label = "DEFAULT";
         };
