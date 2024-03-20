@@ -149,7 +149,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MAX_SHFT_RISELAY_TD";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&mo 8>, <&sl 1>;
+            bindings = <&kp LSHFT>, <&mo 8>, <&sl 3>;
         };
 
         MAX_Q_1_F12_TD: MAX_Q_1_F12_TD {
@@ -202,22 +202,22 @@
         compatible = "zmk,combos";
 
         ACAD_LAY {
-            bindings = <&tog 5>;
+            bindings = <&tog 1>;
             key-positions = <0 12>;
         };
 
         MAX3DS_LAY {
-            bindings = <&tog 6>;
+            bindings = <&tog 2>;
             key-positions = <12 24>;
         };
 
         FPS_G_LAY {
-            bindings = <&tog 3>;
+            bindings = <&tog 5>;
             key-positions = <41 40>;
         };
 
         RPG_G_LAY {
-            bindings = <&tog 4>;
+            bindings = <&tog 6>;
             key-positions = <42 41>;
         };
     };
@@ -386,12 +386,35 @@
 &kp ESCAPE            &kp Q  &kp W              &kp F  &kp P                 &kp B      &kp J    &kp L             &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
 &TAB_WINTAB_TD        &kp A  &kp R              &kp S  &kp T                 &kp G      &kp M    &kp N             &kp E      &kp I         &kp O          &kp SQT
 &NUM_NUMTOG_CAPSL_TD  &kp Z  &kp X              &kp C  &kp D                 &kp V      &kp K    &kp H             &kp COMMA  &kp DOT       &kp FSLH       &WIN_TSKMGR_WSPCSCHW_TD
-                             &ext_power EP_TOG  &mo 1  &LCTRL_LSHFT_LALT_TD  &kp SPACE  &kp RET  &LSHFT_FLEEXP_TD  &mo 2      &out OUT_TOG
+                             &ext_power EP_TOG  &mo 3  &LCTRL_LSHFT_LALT_TD  &kp SPACE  &kp RET  &LSHFT_FLEEXP_TD  &mo 4      &out OUT_TOG
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
 
             label = "DEFAULT";
+        };
+
+        ACAD_LAY {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 9   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &mo 7   &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "ACAD";
+        };
+
+        MAX3D_LAY {
+            bindings = <
+&trans  &trans  &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 9   &trans  &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+                &kp LA(LC(X))  &trans  &MAX_LALT_LSHFT_LCTRL_TD  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "3DSMAX";
+            sensor-bindings = <&inc_dec_kp LBKT RBKT>;
         };
 
         raise_layer {
@@ -429,7 +452,7 @@
 &kp TAB    &kp F  &kp Q  &kp W  &kp E       &NO4_FPS_TD  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp ESCAPE
 &kp B      &kp V  &kp A  &kp S  &kp D       &NO5_FPS_TD  &kp M   &kp N   &none   &kp I   &kp O   &kp J
 &kp LCTRL  &kp Z  &kp X  &kp C  &kp R       &NO6_FPS_TD  &kp K   &kp H   &none   &none   &none   &to 0
-                  &none  &kp G  &kp LSHIFT  &trans       &trans  &mo 0   &mo 1   &none
+                  &none  &kp G  &kp LSHIFT  &trans       &trans  &mo 0   &mo 3   &none
             >;
 
             label = "FPS GAME";
@@ -444,29 +467,6 @@
             >;
 
             label = "RPG GAME";
-        };
-
-        ACAD_LAY {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 9   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &mo 7   &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            label = "ACAD";
-        };
-
-        MAX3D_LAY {
-            bindings = <
-&trans  &trans  &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 9   &trans  &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-                &kp LA(LC(X))  &trans  &MAX_LALT_LSHFT_LCTRL_TD  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            label = "3DSMAX";
-            sensor-bindings = <&inc_dec_kp LBKT RBKT>;
         };
 
         ACAD_MCRO {
