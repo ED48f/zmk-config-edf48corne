@@ -121,12 +121,12 @@
             bindings = <&kp TAB>, <&kp LA(TAB)>, <&kp LA(LC(TAB))>;
         };
 
-        MAX_LALT_LCTRL_TD: MAX_LALT_LCTRL_TD {
+        MAX_LALT_LSHFT_LCTRL_TD: MAX_LALT_LSHFT_LCTRL_TD {
             compatible = "zmk,behavior-tap-dance";
-            label = "MAX_LALT_LCTRL_TD";
+            label = "MAX_LALT_LSHFT_LCTRL_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LALT>, <&kp LCTRL>;
+            tapping-term-ms = <190>;
+            bindings = <&kp LALT>, <&kp LSHIFT>, <&kp LCTRL>;
         };
 
         LSHFT_FLEEXP_TD: LSHFT_FLEEXP_TD {
@@ -473,10 +473,10 @@
 
         MAX3D_LAY {
             bindings = <
-&trans  &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 3   &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-                &kp LA(LC(X))  &trans  &MAX_LALT_LCTRL_TD  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 3   &trans  &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+                &kp LA(LC(X))  &trans  &MAX_LALT_LSHFT_LCTRL_TD  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "3DSMAX";
@@ -503,17 +503,6 @@
             >;
 
             label = "3DS MACRO";
-        };
-
-        MAX_NUMLAY {
-            bindings = <
-&kp KP_PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp KP_DIVIDE       &kp K_SCREENSAVER  &kp PRINTSCREEN  &kp UP         &trans     &trans  &kp DEL
-&kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT       &NUM_BCKSPC_DEL_TD  &kp K_SLEEP        &kp LEFT         &kp DOWN       &kp RIGHT  &trans  &trans
-&trans        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp KP_NUMLOCK      &trans             &trans           &trans         &trans     &trans  &trans
-                               &trans           &kp KP_NUMBER_0  &trans           &trans              &trans             &trans           &kp RIGHT_ALT  &trans
-            >;
-
-            label = "MAX NUM";
         };
     };
 
