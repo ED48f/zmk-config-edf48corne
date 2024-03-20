@@ -473,10 +473,10 @@
 
         MAX3D_LAY {
             bindings = <
-&trans  &MAX_Q_1_F12_TD  &MAX_W_2_F13_TD  &MAX_F_3_F14_TD       &MAX_P_4_F15_TD     &MAX_B_5_F16_TD  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans           &trans                &trans              &trans           &trans  &trans  &trans  &trans  &trans  &trans
-&mo 3   &trans           &trans           &trans                &trans              &trans           &trans  &trans  &trans  &trans  &trans  &to 0
-                         &kp LA(LC(X))    &MAX_SHFT_RISELAY_TD  &MAX_LALT_LCTRL_TD  &trans           &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 3   &trans  &trans         &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+                &kp LA(LC(X))  &trans  &MAX_LALT_LCTRL_TD  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "3DSMAX";
