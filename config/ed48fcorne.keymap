@@ -502,7 +502,7 @@
             label = "NUM MISC";
             sensor-bindings =
                 <&inc_dec_kp C_BRI_INC C_BRI_DEC>,
-                <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
     };
 
