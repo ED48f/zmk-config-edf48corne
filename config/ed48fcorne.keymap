@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
@@ -174,6 +173,14 @@
             tapping-term-ms = <250>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
         };
+
+        SOFT_OFF: SOFT_OFF {
+            compatible = "zmk,behavior-soft-off";
+            label = "SOFT_OFF";
+            #binding-cells = <0>;
+            hold-time-ms = <3000>;
+            split-peripheral-off-on-press;
+        };
     };
 
     combos {
@@ -339,10 +346,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE            &kp Q  &kp W              &kp F  &kp P                 &kp B      &kp J    &kp L             &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
-&TAB_WINTAB_TD        &kp A  &kp R              &kp S  &kp T                 &kp G      &kp M    &kp N             &kp E      &kp I         &kp O          &kp SQT
-&NUM_NUMTOG_CAPSL_TD  &kp Z  &kp X              &kp C  &kp D                 &kp V      &kp K    &kp H             &kp COMMA  &kp DOT       &kp FSLH       &WIN_TSKMGR_WSPCSCHW_TD
-                             &ext_power EP_TOG  &mo 5  &LCTRL_LSHFT_LALT_TD  &kp SPACE  &kp RET  &LSHFT_FLEEXP_TD  &mo 6      &out OUT_TOG
+&kp ESCAPE            &kp Q  &kp W      &kp F  &kp P                 &kp B      &kp J    &kp L             &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
+&TAB_WINTAB_TD        &kp A  &kp R      &kp S  &kp T                 &kp G      &kp M    &kp N             &kp E      &kp I         &kp O          &kp SQT
+&NUM_NUMTOG_CAPSL_TD  &kp Z  &kp X      &kp C  &kp D                 &kp V      &kp K    &kp H             &kp COMMA  &kp DOT       &kp FSLH       &WIN_TSKMGR_WSPCSCHW_TD
+                             &soft_off  &mo 5  &LCTRL_LSHFT_LALT_TD  &kp SPACE  &kp RET  &LSHFT_FLEEXP_TD  &mo 6      &out OUT_TOG
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
