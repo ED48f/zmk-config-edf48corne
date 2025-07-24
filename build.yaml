@@ -17,3 +17,5 @@ include:
     shield: ed48fcorne_left nice_oled
   - board: nice_nano_v2
     shield: ed48fcorne_right nice_oled
+  - board: nice_nano_v2
+    shield: settings_reset
