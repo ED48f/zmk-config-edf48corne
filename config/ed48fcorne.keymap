@@ -111,7 +111,7 @@
         MAX_LALT_LSHFT_LCTRL_TD: MAX_LALT_LSHFT_LCTRL_TD {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <230>;
+            tapping-term-ms = <180>;
             bindings = <&kp LALT>, <&kp LSHIFT>, <&kp LCTRL>;
         };
 
