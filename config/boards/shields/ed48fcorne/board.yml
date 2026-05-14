@@ -1,9 +1,0 @@
-board:
-  name: nice_nano_left
-  vendor: ed48fcorne_left
-  name: nice_nano_right
-  vendor: ed48fcorne_right
-      ...
-  socs:
-  - name: nrf52840
-      ...
