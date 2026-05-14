@@ -384,10 +384,10 @@
 
         FPS_LAYER {
             bindings = <
-&kp TAB    &kp F  &kp Q  &kp W  &kp E       &NO4_FPS_TD  &kp F1  &kp F2  &kp F3  &kp F4      &kp F5  &kp ESCAPE
-&kp B      &kp V  &kp A  &kp S  &kp D       &NO5_FPS_TD  &kp M   &kp N   &none   &kp I       &kp O   &trans
-&kp LCTRL  &kp Z  &kp X  &kp C  &kp R       &NO6_FPS_TD  &kp K   &kp H   &none   &none       &none   &sl 0
-                  &none  &kp G  &kp LSHIFT  &trans       &trans  &tog 0  &trans  &kp C_MUTE
+&kp TAB    &kp F  &kp Q  &kp W  &kp E       &NO4_FPS_TD  &kp F1  &kp F2   &kp F3  &kp F4      &kp F5  &kp ESCAPE
+&kp B      &kp V  &kp A  &kp S  &kp D       &NO5_FPS_TD  &kp M   &kp N    &none   &kp I       &kp O   &trans
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp R       &NO6_FPS_TD  &kp K   &kp H    &none   &none       &none   &sl 0
+                  &none  &kp G  &kp LSHIFT  &trans       &trans  &tog 10  &trans  &kp C_MUTE
             >;
 
             display-name = "FPS GAME";
@@ -471,6 +471,17 @@
             sensor-bindings =
                 <&inc_dec_kp PAGE_DOWN PG_UP>,
                 <&inc_dec_kp C_AC_ZOOM_OUT C_AC_ZOOM_IN>;
+        };
+
+        TYPING {
+            bindings = <
+&kp ESC  &kp Q  &kp W   &kp F   &kp P   &kp B   &kp J   &kp L   &kp U      &kp Y    &kp SEMI  &kp MINUS
+&kp TAB  &kp A  &kp R   &kp S   &kp T   &kp G   &kp M   &kp N   &kp E      &kp I    &kp O     &kp APOS
+&trans   &kp Z  &kp X   &kp C   &kp D   &kp V   &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
     };
 
