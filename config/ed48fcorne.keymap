@@ -105,8 +105,8 @@
         TAB_WINTAB_TD: TAB_WINTAB_TD {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <260>;
-            bindings = <&kp TAB>, <&kp LA(TAB)>, <&kp LA(LC(TAB))>;
+            tapping-term-ms = <250>;
+            bindings = <&kp TAB>, <&kp LA(LC(TAB))>, <&kp LA(TAB)>;
         };
 
         MAX_LALT_LSHFT_LCTRL_TD: MAX_LALT_LSHFT_LCTRL_TD {
@@ -376,9 +376,9 @@
         FPS_LAYER {
             bindings = <
 &kp TAB    &kp F  &kp Q  &kp W  &kp E       &NO4_FPS_TD  &kp F1  &kp F2  &kp F3  &kp F4      &kp F5  &kp ESCAPE
-&kp B      &kp V  &kp A  &kp S  &kp D       &NO5_FPS_TD  &kp M   &kp N   &none   &kp I       &kp O   &kp J
-&kp LCTRL  &kp Z  &kp X  &kp C  &kp R       &NO6_FPS_TD  &kp K   &kp H   &none   &none       &none   &to 0
-                  &none  &kp G  &kp LSHIFT  &trans       &trans  &trans  &trans  &kp C_MUTE
+&kp B      &kp V  &kp A  &kp S  &kp D       &NO5_FPS_TD  &kp M   &kp N   &none   &kp I       &kp O   &trans
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp R       &NO6_FPS_TD  &kp K   &kp H   &none   &none       &none   &sl 0
+                  &none  &kp G  &kp LSHIFT  &trans       &mo 0   &trans  &trans  &kp C_MUTE
             >;
 
             display-name = "FPS GAME";
