@@ -181,7 +181,7 @@
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp LA(F4)>;
 
-            tapping-term-ms = <230>;
+            tapping-term-ms = <100>;
         };
     };
 
