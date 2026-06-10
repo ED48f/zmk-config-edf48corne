@@ -174,15 +174,6 @@
             tapping-term-ms = <250>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
         };
-
-        ESC_ALTF4_TD: ESC_ALTF4_TD {
-            compatible = "zmk,behavior-tap-dance";
-            label = "ESC_ALTF4_TD";
-            #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp LA(F4)>;
-
-            tapping-term-ms = <180>;
-        };
     };
 
     combos {
@@ -348,7 +339,7 @@
 
         default_layer {
             bindings = <
-&ESC_ALTF4_TD         &kp Q  &kp W              &kp F  &kp P                 &kp B      &kp J    &kp L             &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
+&kp ESC               &kp Q  &kp W              &kp F  &kp P                 &kp B      &kp J    &kp L             &kp U      &kp Y         &kp SEMICOLON  &BCKSPC_TD
 &TAB_WINTAB_TD        &kp A  &kp R              &kp S  &kp T                 &kp G      &kp M    &kp N             &kp E      &kp I         &kp O          &kp SQT
 &NUM_NUMTOG_CAPSL_TD  &kp Z  &kp X              &kp C  &kp D                 &kp V      &kp K    &kp H             &kp COMMA  &kp DOT       &kp FSLH       &WIN_TSKMGR_WSPCSCHW_TD
                              &ext_power EP_TOG  &mo 5  &LCTRL_LSHFT_LALT_TD  &kp SPACE  &kp RET  &LSHFT_FLEEXP_TD  &mo 6      &out OUT_TOG
